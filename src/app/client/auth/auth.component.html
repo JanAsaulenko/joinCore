@@ -1,0 +1,18 @@
+<div class="pop-up">
+  <div class="auth__block">
+    <button class="btn-scs enter_email"><span>Войти c помощью Gmail</span></button>
+    <form class="form" *ngIf="authForm; else regForm">
+      <label class="form_element">
+        <input class="form_element-input" placeholder="Адрес електронной почты">
+      </label>
+      <label class="form_element">
+        <input class="form_element-input" placeholder="Пароль">
+      </label>
+      <button class="btn-scs">Войти</button>
+      <span>Не зарегистрированы? <a (click)="openRegistrationForm()">Зарегистрироваться</a> </span>
+    </form>
+    <ng-template #regForm>
+      <app-registration></app-registration>
+    </ng-template>
+  </div>
+</div>

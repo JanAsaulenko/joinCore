@@ -1,3 +1,6 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<app-header (openAuth)="triggerAuth()"></app-header>
+<div class="main">
+  <router-outlet></router-outlet>
+  <app-auth *ngIf="authOpened"></app-auth>
+</div>
 <app-footer></app-footer>

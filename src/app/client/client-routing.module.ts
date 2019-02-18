@@ -15,7 +15,6 @@ const aboutRoutes: Routes = [
         path: '', component: HomeComponent
       }
     ]
-
   }
 ];
 

@@ -1,1 +1,28 @@
+@import "assets/shared/colors.scss";
 /* You can add global styles to this file, and also import other style files */
+%btn {
+  height: 40px;
+  background: $btn-scs-color;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+.btn-scs {
+  @extend %btn;
+}
+
+.btn-error {
+  @extend %btn;
+  background: $btn-error-color;
+  border-radius: 5px;
+}
+
+.btn-close {
+  background: $btn-close-color;
+}
+
+.form_element-input {
+  border-radius: 5px;
+  height: 40px;
+}
