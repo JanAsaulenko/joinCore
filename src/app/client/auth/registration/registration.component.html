@@ -1,16 +1,20 @@
-<form class="form">
-<label>
-  <input placeholder="Элетроный адрес">
+<form class="form" [formGroup]="formGroup" (ngSubmit)="registrateUser()" >
+<label class="form_element">
+  <input class="form_element-input"  formControlName="mail" placeholder="Элетроный адрес">
 </label>
-  <label>
-    <input type="text" placeholder="Имя">
+  <label class="form_element">
+    <input class="form_element-input" formControlName="name" type="text" placeholder="Имя">
   </label>
-  <label><input type="text" placeholder="Фамилия"></label>
-<label>
-  <input placeholder="Введите пароль">
+  <label class="form_element">
+    <input class="form_element-input" type="text" formControlName="surname" placeholder="Фамилия"></label>
+<label class="form_element">
+  <input class="form_element-input" formControlName="password" placeholder="Введите пароль">
 </label>
-  <label>
-    <input placeholder="Подтвердите пароль">
+  <label class="form_element">
+    <input class="form_element-input" formControlName="confirm_password" placeholder="Подтвердите пароль">
   </label>
-  <button type="submit">Зарегистрироваться</button>
+  <div class="form_button-block">
+    <button class="btn-back" (click)="redirectToEnter()"> Войти</button>
+  <button class="btn-scs" type="submit">Зарегистрироваться</button>
+  </div>
 </form>
