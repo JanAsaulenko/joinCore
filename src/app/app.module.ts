@@ -1,10 +1,14 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
+import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AdminModule} from './admin/admin.module';
+import {AngularFireModule} from 'angularfire2';
 
+import {config} from './firebase-config';
+import {ReactiveFormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,9 +16,13 @@ import {AdminModule} from './admin/admin.module';
   imports: [
     BrowserModule,
     AdminModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(config),
   ],
-  providers: [],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

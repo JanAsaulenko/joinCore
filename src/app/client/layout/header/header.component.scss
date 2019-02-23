@@ -1,12 +1,27 @@
 .header{
   display: flex;
- justify-content: center;
+  justify-content: flex-end;
+  margin-right: 20px;
 }
 
 .header_nav{
   display: flex;
+  width: 650px;
   flex-direction: row;
   list-style: none;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+  &-item{
+    &:active{
+      border:0;
+      background: grey;
+    }
+    &:hover{
+      //background: grey;
+    }
+
+  }
+
 }
+

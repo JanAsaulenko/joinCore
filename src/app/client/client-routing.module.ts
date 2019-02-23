@@ -1,21 +1,22 @@
 import {ModuleWithProviders} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {MainComponent} from './main/main.component';
-import {CabinetComponent} from './cabinet/cabinet.component';
 import {HomeComponent} from './home/home.component';
+import {AuthGuard} from './guards/auth.guard';
 
 const aboutRoutes: Routes = [
-  {
-    path: '', component: MainComponent,
-    children: [
-      {
-        path: 'cabinet', component: CabinetComponent
-      },
-      {
-        path: '', component: HomeComponent
-      }
-    ]
-  }
-];
+    {
+      path: '', component: MainComponent,
+      children: [
+        {
+          path: 'cabinet',
+          canActivate: [AuthGuard],
+          loadChildren: './cabinet/cabinet.module#CabinetModule'
+        },
+        {path: '', component: HomeComponent}
+      ]
+    }
+  ]
+;
 
 export const ClientRoutingModule: ModuleWithProviders = RouterModule.forChild(aboutRoutes);

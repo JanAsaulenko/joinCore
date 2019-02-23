@@ -6,10 +6,17 @@
   border-radius: 5px;
   color: white;
   font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor:pointer;
 }
 
 .btn-scs {
   @extend %btn;
+}
+.btn-back{
+  @extend %btn;
+  background: $btn-back-color;
 }
 
 .btn-error {
@@ -25,4 +32,22 @@
 .form_element-input {
   border-radius: 5px;
   height: 40px;
+  padding-left: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.form:after{
+  content: 'x';
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.link{
+  cursor: pointer;
 }

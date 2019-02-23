@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-main',
@@ -8,13 +9,17 @@ import {Component, OnInit} from '@angular/core';
 export class MainComponent implements OnInit {
   private authOpened = false;
 
-  constructor() {
+  constructor(private auth: AuthService) {
+    auth.isRegistratePopupOpened$.subscribe(data => {
+      this.authOpened = data;
+    });
   }
+
 
   ngOnInit() {
   }
 
   triggerAuth() {
-    this.authOpened = !this.authOpened;
+    this.authOpened ? this.auth.isRegistratePopupOpened$.next(false) : this.auth.isRegistratePopupOpened$.next(false);
   }
 }

@@ -26,11 +26,11 @@
   align-items: center;
   position: absolute;
   width: 568px;
-  height: 791px;
+  height: auto;
   padding: 30px;
   background: white;
   left: 50%;
-  top: 20%;
+  top: 10%;
   min-height: 400px;
   margin: 0 auto;
   transform: translate(-50%);
@@ -45,11 +45,12 @@
 
 .form_element {
   width: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .form_element-input {
   width: inherit;
-  margin-top: 10px;
 }
 
 .btn-scs {
