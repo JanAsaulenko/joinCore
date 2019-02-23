@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 export class AuthComponent implements OnInit {
   public authForm = true;
   private authFormGroup = new FormGroup({
-    mail: new FormControl('asaulenkojan@gmail.com'),
+    mail: new FormControl('romandav@gmail.com'),
     password: new FormControl('111111')
   });
 
@@ -23,17 +23,21 @@ export class AuthComponent implements OnInit {
   }
 
   signInWithGoogle() {
-    this.auth.doGoogleLogin().then(data => {
-      console.log(data);
+    this.auth.doGoogleLogin().then(() => {
+      const redirectURL = '/cabinet';
+      this.redirectToPages(redirectURL).then(value => console.log(value)).catch(error => console.log(error));
     });
   }
 
+  redirectToPages(pageName) {
+    return this.router.navigate([pageName]);
+  }
+
   signInWithEmailAndPassword() {
-    this.auth.doPasswordAndLoginAuth(this.authFormGroup.value).then((data) => {
-      console.log(data);
+    this.auth.doPasswordAndLoginAuth(this.authFormGroup.value).then(() => {
       const redirectURl = '/cabinet';
       this.auth.isRegistratePopupOpened$.next(false);
-      this.router.navigate([redirectURl]).then((value) => console.log(value)
+      this.redirectToPages(redirectURl).then((value) => console.log(value)
       ).catch(error => console.log(error));
     }).catch(error => {
       console.error(error);
