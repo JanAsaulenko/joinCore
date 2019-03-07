@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
 import {AuthService} from '../../shared/services/auth.service';
 
 @Component({
@@ -15,10 +15,15 @@ export class MainComponent implements OnInit {
     });
   }
 
+  @HostListener('click', ['$event'])
+  closePopup($event) {
+    if ($event.target.className === 'pop-up' || $event.target.className === 'form ng-untouched ng-pristine ng-valid' ) {
+      this.authOpened = false;
+    }
+  }
 
   ngOnInit() {
   }
-
   triggerAuth() {
     this.authOpened ? this.auth.isRegistratePopupOpened$.next(false) : this.auth.isRegistratePopupOpened$.next(false);
   }

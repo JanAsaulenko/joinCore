@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, Directive, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {AuthService} from '../../../shared/services/auth.service';
 
@@ -7,6 +7,7 @@ import {AuthService} from '../../../shared/services/auth.service';
   templateUrl: './registration.component.html',
   styleUrls: ['./registration.component.scss']
 })
+
 export class RegistrationComponent implements OnInit {
   @Output() redirectToAuth = new EventEmitter();
 
@@ -23,7 +24,6 @@ export class RegistrationComponent implements OnInit {
 
   constructor(private auth: AuthService) {
   }
-
   ngOnInit() {
   }
 
