@@ -1,0 +1,84 @@
+.section{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  left: 20%;
+  min-width: 400px;
+  background-color: white;
+  opacity: 0.9;
+  border: white solid 1px;
+  border-radius: 3px;
+}
+.Wallpapers{
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+
+}
+.Png{
+  position: relative;
+  height: 200px;
+  width: 300px;
+  left: 15%;
+  top: 19px;
+  border-radius: 4px;
+}
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+
+}
+
+.rating {
+  font: 35px  bold sans-serif;
+  position: relative;
+  top: 6px;
+  right: 13%;
+  display: flex;
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  align-items: center;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+  color: gold;
+  transition: all .5s linear;
+  text-shadow: 0 0 5px white, 0 0 10px white , 0 0 15px gold , 0 0 20px white, 0 0 35px black, 0 0 40px white,  0 0 75px gold;
+}
+
+.tell_text-block{
+  display: block;
+  position: relative;
+  left:35%;
+  vertical-align: baseline ;
+}
+.tell_text{
+  width: 250px;
+  height: 150px;
+}
+
+.usersTell{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  bottom:35px;
+  left: 30px;
+  width: 220px;
+
+}
+.user{
+  width: 50px;
+}

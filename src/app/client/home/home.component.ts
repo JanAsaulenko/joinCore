@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FeedbackService} from '../../shared/services/home/feedback.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  public feedbacks;
 
-  constructor() { }
+
+  constructor(private feedbackService: FeedbackService) {
+  }
 
   ngOnInit() {
+    this.feedbacks = this.feedbackService.returnLatestFeedbacks();
+    console.log(this.feedbacks);
   }
+
+
 
 }

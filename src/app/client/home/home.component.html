@@ -1,50 +1,7 @@
 <div class="content">
 
   <div class="inform_panel">
-    <div class="section">
-      <div class="Wallpapers" *ngFor=""></div>
-      <img class="Png" src="../../../assets/Image/info.jpg">
-      <div class="rating">
-        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-      </div>
-
-      <span class="text"> <h2> What guests are saying about homes</h2></span>
-      <div class="tell_text">
-          <span class="tell_text-block">
-            Such a lovely cottage in a beautiful neighborhood. Arrangements for check-in were easy, the place was spotless when we
-          </span>
-      </div>
-      <div class="usersTell">
-        <img class="user" src="../../../assets/Image/user.png">
-        <span><h3>United States</h3>
-            <a>Boris Tvaruna</a>
-          </span>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="Wallpapers"></div>
-      <img class="Png" src="../../../assets/Image/Main.png">
-      <div class="rating">
-        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-      </div>
-
-      <span class="text"> <h2> What guests are saying about homes</h2></span>
-      <div class="tell_text">
-          <span class="tell_text-block">
-            Such a lovely cottage in a beautiful neighborhood. Arrangements for check-in were easy, the place was spotless when we
-          </span>
-      </div>
-      <div class="usersTell">
-        <img class="user" src="../../../assets/Image/user.png">
-        <span><h3>Ukrainian</h3>
-            <a>Jan Asaulenko</a>
-          </span>
-      </div>
-    </div>
-
-
-  </div>
-
+    <app-feedbacks *ngFor="let feedback of feedbacks" [item]="feedback"></app-feedbacks>
 </div>
 
+</div>
