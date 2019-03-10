@@ -8,6 +8,7 @@ import {HomeComponent} from './home/home.component';
 import { AuthComponent } from './auth/auth.component';
 import { RegistrationComponent } from './auth/registration/registration.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FeedbacksComponent } from './home/feedbacks/feedbacks.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     ClientRoutingModule
   ],
-  declarations: [MainComponent, HeaderComponent, FooterComponent, HomeComponent, AuthComponent, RegistrationComponent]
+  declarations: [MainComponent, HeaderComponent, FooterComponent, HomeComponent, AuthComponent, RegistrationComponent, FeedbacksComponent]
 })
 export class ClientModule {
 }

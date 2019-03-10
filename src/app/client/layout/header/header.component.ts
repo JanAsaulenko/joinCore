@@ -16,10 +16,12 @@ export class HeaderComponent implements OnInit {
   }
 
   openAuthForms() {
+    console.log('some')
     this.auth.isRegistratePopupOpened$.next(true);
   }
 
   outputAcount() {
+
     this.auth.logOut()
       .then(() => {
         const redirectURl = '/';

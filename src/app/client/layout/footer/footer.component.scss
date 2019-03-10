@@ -1,0 +1,35 @@
+.footer{
+  display:flex;
+  justify-content:center;
+  background-color: black;
+   opacity: 0.6%;
+
+
+}
+.footer_nav{
+  width: 400px;
+  display: flex;
+  color: white;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  &-item{
+    &:active{
+      border:2px;
+      color:blue;
+
+    }
+    &:hover{
+      opacity: 0.3%;
+      color:#FF5A5F;
+      transition: all .5s linear;
+      letter-spacing: 0.001em;
+      text-shadow: 0 0 5px , 0 0 10px , 0 0 15px , 0 0 20px crimson, 0 0 35px crimson, 0 0 40px crimson,  0 0 75px crimson;
+
+    }
+
+  }
+
+}

@@ -1,6 +1,6 @@
 <div class="pop-up">
-  <div class="auth__block">
-    <button class="btn-scs enter_email" (click)="signInWithGoogle()"><span>Войти c помощью Gmail</span></button>
+  <div class="auth__block" >
+    <button class="btn-scs enter_email" (click)="signInWithGoogle()"><span>Log in for Gmail</span></button>
     <form class="form" [formGroup]="authFormGroup"
                       (ngSubmit)="signInWithEmailAndPassword()"
                       *ngIf="authForm; else regForm">
@@ -10,7 +10,7 @@
       <label class="form_element">
         <input class="form_element-input" formControlName="password" placeholder="Пароль">
       </label>
-      <button class="btn-scs" type="submit" >Войдите</button>
+      <button class="btn-scs" type="submit" > Log in</button>
       <span>Не зарегистрированы? <a (click)="openRegistrationForm()" class="link">Зарегистрироваться</a> </span>
     </form>
     <ng-template #regForm>
