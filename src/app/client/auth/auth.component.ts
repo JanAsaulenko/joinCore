@@ -11,7 +11,7 @@ import {Router} from '@angular/router';
 export class AuthComponent implements OnInit {
   public authForm = true;
   private authFormGroup = new FormGroup({
-    mail: new FormControl('romandav@gmail.com'),
+    mail: new FormControl('romandavi@gmail.com'),
     password: new FormControl('111111')
   });
 

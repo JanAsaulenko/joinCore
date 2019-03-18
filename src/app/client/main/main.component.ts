@@ -7,7 +7,7 @@ import {AuthService} from '../../shared/services/auth.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  private authOpened = false;
+  public authOpened = false;
 
   constructor(private auth: AuthService) {
     auth.isRegistratePopupOpened$.subscribe(data => {

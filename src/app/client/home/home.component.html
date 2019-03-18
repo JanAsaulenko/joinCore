@@ -1,7 +1,15 @@
-<div class="content">
+<div class="header_block">
+  <div class="search_block">
+    <app-search></app-search>
+  </div>
+</div>
 
+<main class="main_block">
   <div class="inform_panel">
     <app-feedbacks *ngFor="let feedback of feedbacks" [item]="feedback"></app-feedbacks>
-</div>
+  </div>
+  <div class="divider_block">
+    <a class="anchor" href="#"><img alt="" class="chevron" src="../../../assets/Image/chevron.png"> </a>
+  </div>
+</main>
 
-</div>

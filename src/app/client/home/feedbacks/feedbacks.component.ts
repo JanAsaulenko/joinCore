@@ -17,6 +17,7 @@ export class FeedbacksComponent implements OnInit {
 
   createStars() {
     const block = this.renderer.createElement('div');
+    this.renderer.addClass(block, 'star-block');
     for (let i = 0; i < this.item.Range; i++) {
       const star = this.renderer.createElement('span');
       const starText = this.renderer.createText('☆');
@@ -27,5 +28,6 @@ export class FeedbacksComponent implements OnInit {
     const ratingBlock = this.renderer.selectRootElement('.rating');
     this.renderer.appendChild(ratingBlock, block);
   }
+
 
 }

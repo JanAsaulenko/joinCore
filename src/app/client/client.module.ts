@@ -5,10 +5,12 @@ import {ClientRoutingModule} from './client-routing.module';
 import {HeaderComponent} from './layout/header/header.component';
 import {FooterComponent} from './layout/footer/footer.component';
 import {HomeComponent} from './home/home.component';
-import { AuthComponent } from './auth/auth.component';
-import { RegistrationComponent } from './auth/registration/registration.component';
+import {AuthComponent} from './auth/auth.component';
+import {RegistrationComponent} from './auth/registration/registration.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { FeedbacksComponent } from './home/feedbacks/feedbacks.component';
+import {FeedbacksComponent} from './home/feedbacks/feedbacks.component';
+import {SearchComponent} from './home/search/search.component';
+
 
 @NgModule({
   imports: [
@@ -17,7 +19,7 @@ import { FeedbacksComponent } from './home/feedbacks/feedbacks.component';
     ReactiveFormsModule,
     ClientRoutingModule
   ],
-  declarations: [MainComponent, HeaderComponent, FooterComponent, HomeComponent, AuthComponent, RegistrationComponent, FeedbacksComponent]
+  declarations: [MainComponent, HeaderComponent, FooterComponent, HomeComponent, AuthComponent, RegistrationComponent, FeedbacksComponent, SearchComponent]
 })
 export class ClientModule {
 }

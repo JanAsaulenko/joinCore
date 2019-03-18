@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.feedbacks = this.feedbackService.returnLatestFeedbacks();
-    console.log(this.feedbacks);
+    this.feedbacks = this.feedbackService.returnLatestFeedbacks();
   }
 
 
