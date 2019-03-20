@@ -5,7 +5,8 @@
 </div>
 
 <main class="main_block">
-<app-categories-block></app-categories-block>
+  <app-categories-block></app-categories-block>
+  <router-outlet></router-outlet>
   <div class="inform_panel">
     <app-feedbacks *ngFor="let feedback of feedbacks" [item]="feedback"></app-feedbacks>
   </div>

@@ -9,14 +9,16 @@ import {Router} from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+
   constructor(private auth: AuthService, private router: Router) {
   }
+
 
   ngOnInit() {
   }
 
   openAuthForms() {
-    console.log('some')
+    console.log('some');
     this.auth.isRegistratePopupOpened$.next(true);
   }
 

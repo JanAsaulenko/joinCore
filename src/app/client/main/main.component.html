@@ -1,4 +1,7 @@
 <app-header ></app-header>
+<audio #audioOption>
+  <source src="../../../assets/audio.mp3">
+</audio>
 <div class="main">
   <router-outlet></router-outlet>
   <app-auth *ngIf="authOpened"></app-auth>
