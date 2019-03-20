@@ -1,4 +1,6 @@
-.item-block{
+@import "../../../../../styles";
+.category_item-block{
+  @extend %section;
   display: flex;
   flex-direction: column;
   justify-content: center;

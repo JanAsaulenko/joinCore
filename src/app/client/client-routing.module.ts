@@ -13,7 +13,10 @@ const aboutRoutes: Routes = [
           canActivate: [AuthGuard],
           loadChildren: './cabinet/cabinet.module#CabinetModule'
         },
-        {path: '', component: HomeComponent}
+        {
+          path: '', component: HomeComponent
+          //    loadChildren: './home/home.module#HomeRoutingModule'
+        }
       ]
     }
   ]

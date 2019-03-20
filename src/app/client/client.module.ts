@@ -8,8 +8,12 @@ import {HomeComponent} from './home/home.component';
 import {AuthComponent} from './auth/auth.component';
 import {RegistrationComponent} from './auth/registration/registration.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {FeedbacksComponent} from './home/feedbacks/feedbacks.component';
+import {FeedbacksComponent} from './home/main/feedbacks/feedbacks.component';
 import {SearchComponent} from './home/search/search.component';
+import {AnchorComponent} from './home/anchor/anchor.component';
+import {PointerCityComponent} from './home/pointer-city/pointer-city.component';
+import {CategoryComponent} from './home/main/category/category.component';
+import { CategoriesBlockComponent } from './home/categories-block/categories-block.component';
 
 
 @NgModule({
@@ -19,7 +23,10 @@ import {SearchComponent} from './home/search/search.component';
     ReactiveFormsModule,
     ClientRoutingModule
   ],
-  declarations: [MainComponent, HeaderComponent, FooterComponent, HomeComponent, AuthComponent, RegistrationComponent, FeedbacksComponent, SearchComponent]
+  declarations: [MainComponent, HeaderComponent, FooterComponent, HomeComponent,
+    AuthComponent, RegistrationComponent, FeedbacksComponent, SearchComponent, AnchorComponent, PointerCityComponent,
+  CategoryComponent,
+  CategoriesBlockComponent]
 })
 export class ClientModule {
 }

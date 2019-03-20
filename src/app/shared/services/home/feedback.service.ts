@@ -8,7 +8,6 @@ export class FeedbackService {
   private mock1 = new Feedback();
   private mockFeedbacks = [this.mock1];
 
-
   constructor() {
     this.setMockData();
   }
