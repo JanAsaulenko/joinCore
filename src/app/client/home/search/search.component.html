@@ -1,18 +1,24 @@
 <span class="label_text"> Book unique homes and experiences. </span>
 <form class="form">
-    <label class="form_element">
-    <input placeholder="Anywhere" class="form_element-input">
-    </label>
   <label class="form_element">
-    <input placeholder="Anywhere" class="form_element-input">
+    <input placeholder="Town" class="form_element-input">
   </label>
   <label class="form_element">
-    <input placeholder="Mon/Day/Year" class="form_element-input">
+    <input placeholder="Region" class="form_element-input">
   </label>
   <label class="form_element">
-    <input placeholder="Mon/Day/Year" class="form_element-input">
+    <input placeholder="Price" type='text' class="form_element-input_price">
+    <input placeholder="Price" class="form_element-input_price">
   </label>
-<button class="btn-search">
-  Search
-</button>
+  <label class="form_element">
+<input  [matDatepicker]="myDatapicker"  >
+    <!--<mat-calendar-header></mat-calendar-header>-->
+    <mat-datepicker [color]="color" #myDatapicker></mat-datepicker>
+    <mat-datepicker-toggle matSuffix [for]="myDatapicker" ></mat-datepicker-toggle>
+    <mat-datepicker #myDatapicker startView="year" [startAt]="startDate"></mat-datepicker>
+  </label>
+
+  <button class="btn-search">
+    Search
+  </button>
 </form>

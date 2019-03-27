@@ -1,4 +1,4 @@
-import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {AuthService} from '../../shared/services/auth.service';
 
 @Component({
@@ -15,8 +15,6 @@ export class MainComponent implements OnInit {
     });
   }
 
-  @ViewChild('audioOption') audioRef: ElementRef;
-
   @HostListener('click', ['$event'])
   closePopup($event) {
     if ($event.target.className === 'pop-up' || $event.target.className === 'form ng-untouched ng-pristine ng-valid') {
@@ -25,7 +23,6 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.audioRef.nativeElement.play();
   }
 
   triggerAuth() {

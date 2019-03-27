@@ -11,12 +11,17 @@ import {CategoryComponent} from './main/category/category.component';
 import { CategoriesListComponent } from './categories-block/categories-list/categories-list.component';
 import { CategoryItemComponent } from './categories-block/category-item/category-item.component';
 import {HomeComponent} from './home.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     HomeRoutingModule
   ],
   declarations: [ HomeComponent, FeedbacksComponent, AnchorComponent, CategoriesBlockComponent, PointerCityComponent,

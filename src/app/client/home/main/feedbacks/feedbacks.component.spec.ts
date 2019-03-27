@@ -21,5 +21,6 @@ describe('FeedbacksComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    console.log(component);
   });
 });

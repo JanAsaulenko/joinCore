@@ -1,11 +1,17 @@
 .header_block {
   display: flex;
   min-height: 100vh;
+  min-width: 100vh;
   flex-direction: row;
   background: white;
   margin: 0;
-  background: url("../../../assets/Image/Main2.jpg");
+  background: url("../../../assets/Image/Main3.jpg") no-repeat;
+  background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
 }
+
 
 .search_block {
   border-radius: 4px !important;

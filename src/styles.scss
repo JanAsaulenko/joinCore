@@ -61,7 +61,26 @@ body {
   height: 40px;
   padding-left: 5px;
   width: 270px;
-  margin: 13px;
+  margin: 10px;
+}
+input::-webkit-input-placeholder {
+  padding: 14px;
+  color: darkgrey;
+
+}
+.form_element-input_price{
+  border: 2px solid rgba(242, 241, 239, 1);
+  border-radius: 5px;
+  height: 40px;
+   width:132px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 4px;
+}
+.form_element-input_price:hover{
+  transition: all .9s linear;
+  border: 2px solid $btn-btn-color;
+  letter-spacing: 0.009em;
 }
 
 .form_element-input:hover {
@@ -112,13 +131,13 @@ form.btn-close {
 
 .btn-search {
   position: relative;
-  top: 4px;
-  left: 17%;
+  top: 6px;
+  left: 19%;
   border-radius: 6px;
   background: $btn-btn-color;
   font-size: 13px;
   color: $background;
-  width: 150px;
+  width: 135px;
   height: 40px;
   cursor: pointer;
   border: 2px solid $btn-btn-color;
