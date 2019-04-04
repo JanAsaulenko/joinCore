@@ -31,17 +31,27 @@
   height: auto;
   padding: 30px;
   background: white;
-  left: 35%;
+  left: 34%;
   top: 16%;
   min-height: 384px;
   margin: 0 auto;
   z-index: 1;
   transform: translate(-50%);
-&:before{
-  content: '';
-  background: white;
+
+  &:before {
+    content: '';
+    background: white;
+  }
+
+  &:after {
+    content: url("../../../assets/Image/close.png");
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
 }
-}
+
 
 .form {
   display: flex;
@@ -52,8 +62,8 @@
 
 .form_element {
   width: inherit;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
 }
 
@@ -71,10 +81,11 @@
   border: #369818;
 
 }
-.btn-scs:hover{
-  background-color:green;
+
+.btn-scs:hover {
+  background-color: green;
   transition: all .4s linear;
-  box-shadow: 0 0 5px green, 0 0 10px green , 0 0 15px green;
+  box-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
   color: black;
 
 }
@@ -82,37 +93,40 @@
 .enter_email {
   text-shadow: #98263F;
   background: crimson;
-  border: 2px solid crimson ;
+  border: 2px solid crimson;
   color: white;
 }
 
 .enter_email:hover {
-  background-color:crimson;
+  background-color: crimson;
   transition: all .5s linear;
   letter-spacing: 0.009em;
   text-shadow: black;
-  box-shadow:  0 0 5px crimson, 0 0 10px crimson , 0 0 15px crimson, 0 0 20px crimson, 0 0 35px white, 0 0 40px white,  0 0 75px white;
+  box-shadow: 0 0 5px crimson, 0 0 10px crimson, 0 0 15px crimson, 0 0 20px crimson, 0 0 35px white, 0 0 40px white, 0 0 75px white;
 }
-.btn-register{
+
+.btn-register {
   height: 30px;
   width: 150px;
   background: crimson;
   border-radius: 3px;
-  border: 2px solid crimson ;
+  border: 2px solid crimson;
   position: relative;
-  top:20px;
+  top: 20px;
 }
-.btn-register:hover{
-  box-shadow:  0 0 5px crimson, 0 0 10px crimson , 0 0 15px crimson, 0 0 20px crimson, 0 0 35px white;
+
+.btn-register:hover {
+  box-shadow: 0 0 5px crimson, 0 0 10px crimson, 0 0 15px crimson, 0 0 20px crimson, 0 0 35px white;
   color: white;
   transition: all .5s linear;
   letter-spacing: 0.009em;
-  text-shadow:  0 0 5px white, 0 0 10px crimson , 0 0 15px crimson, 0 0 20px crimson, 0 0 35px white;
+  text-shadow: 0 0 5px white, 0 0 10px crimson, 0 0 15px crimson, 0 0 20px crimson, 0 0 35px white;
 }
-.text_registration{
+
+.text_registration {
   position: relative;
   top: 9px;
-  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
 }
 
 

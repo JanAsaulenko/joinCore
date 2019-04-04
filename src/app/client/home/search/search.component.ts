@@ -1,14 +1,17 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, HostBinding} from '@angular/core';
+import {trigger, state, style, animate, transition} from '@angular/animations';
 
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss']
+  styleUrls: ['./search.component.scss'],
+  animations: [trigger, state, style, animate, transition]
 })
 export class SearchComponent implements OnInit {
   @Input() color;
-    public startDate;
+  public startDate;
+
   constructor() {
   }
 

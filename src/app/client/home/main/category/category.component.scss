@@ -2,7 +2,9 @@
 .category_item-block{
   @extend %section;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  min-width: inherit;
+  width: 300px;
+  height: 400px ;
 }

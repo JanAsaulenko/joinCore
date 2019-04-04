@@ -11,10 +11,10 @@
     <input placeholder="Price" class="form_element-input_price">
   </label>
   <label class="form_element">
-<input  [matDatepicker]="myDatapicker"  >
+    <input [matDatepicker]="myDatapicker">
     <!--<mat-calendar-header></mat-calendar-header>-->
     <mat-datepicker [color]="color" #myDatapicker></mat-datepicker>
-    <mat-datepicker-toggle matSuffix [for]="myDatapicker" ></mat-datepicker-toggle>
+    <mat-datepicker-toggle matSuffix [for]="myDatapicker"></mat-datepicker-toggle>
     <mat-datepicker #myDatapicker startView="year" [startAt]="startDate"></mat-datepicker>
   </label>
 

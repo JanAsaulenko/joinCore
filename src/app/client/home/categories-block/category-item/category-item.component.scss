@@ -1,4 +1,40 @@
 .form_category{
-  border: black solid 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  //border: 2px solid rgba(242, 241, 239, 1);
+  border-radius: 5px;
   height: 350px;
+}
+.form_wallpapers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   flex-direction: column;
+  margin: 50px;
+  border: 2px solid rgba(242, 241, 239, 1);
+  border-radius: 5px;
+  height: 260px;
+  width: 300px;
+  background-image: url("../../../../../assets/Image/terrah.jpg" );
+  background-repeat: no-repeat;
+}
+.form_img{
+  height: 350px;
+  width: 300px;
+}
+.form_text{
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+.form_text:hover{
+  color: grey;
+}
+.form_subtitle{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

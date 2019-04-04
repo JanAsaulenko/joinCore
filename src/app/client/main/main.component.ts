@@ -1,5 +1,9 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from '../../shared/services/auth.service';
+import {fromEvent} from 'rxjs';
+import {filter, map} from 'rxjs/operators';
+
+// import Reference = firebase.storage.Reference;
 
 @Component({
   selector: 'app-main',
@@ -9,18 +13,13 @@ import {AuthService} from '../../shared/services/auth.service';
 export class MainComponent implements OnInit {
   public authOpened = false;
 
+
   constructor(private auth: AuthService) {
     auth.isRegistratePopupOpened$.subscribe(data => {
       this.authOpened = data;
     });
   }
 
-  @HostListener('click', ['$event'])
-  closePopup($event) {
-    if ($event.target.className === 'pop-up' || $event.target.className === 'form ng-untouched ng-pristine ng-valid') {
-      this.authOpened = false;
-    }
-  }
 
   ngOnInit() {
   }
