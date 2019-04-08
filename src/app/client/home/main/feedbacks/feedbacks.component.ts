@@ -24,7 +24,6 @@ export class FeedbacksComponent implements OnInit {
       this.renderer.appendChild(star, starText);
       this.renderer.appendChild(block, star);
     }
-    console.log(block);
     const ratingBlock = this.renderer.selectRootElement('.rating');
     this.renderer.appendChild(ratingBlock, block);
   }

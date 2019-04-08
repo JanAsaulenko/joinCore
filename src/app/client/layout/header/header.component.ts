@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   }
 
   openAuthForms() {
-    console.log('some');
     this.auth.isRegistratePopupOpened$.next(true);
   }
 

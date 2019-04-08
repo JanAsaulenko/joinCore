@@ -1,9 +1,11 @@
 <div class="pop-up" #popup>
-  <div *ngIf [@startFinish]="isOpen ? 'start': 'finish'" class="auth__block">
+  <div class="auth__block">
+    <span class="btn-close">x</span>
     <button class="btn-scs enter_email" (click)="signInWithGoogle()"><span>Log in for Gmail</span></button>
     <form class="form" [formGroup]="authFormGroup"
           (ngSubmit)="signInWithEmailAndPassword()"
           *ngIf="authForm; else regForm">
+
       <label class="form_element">
         <input formControlName="mail" class="form_element-input" placeholder="Адрес електронной почты">
       </label>

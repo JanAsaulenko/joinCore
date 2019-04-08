@@ -8,6 +8,7 @@ import {AngularFireModule} from 'angularfire2';
 import {config} from './firebase-config';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(config),
+    BrowserAnimationsModule
   ],
   exports: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,10 @@
-<app-header ></app-header>
-<div class="main">
+<app-header></app-header>
+<div class="main" #main>
   <router-outlet></router-outlet>
-  <app-auth *ngIf="authOpened"></app-auth>
+  <div [@disabled]="isDisabled  ?'open' : 'closed'" (click)="closePopup()">
+  </div>
+  <div [@trigger]="authOpened ? 'open' : 'closed'" class="auth_container">
+    <app-auth></app-auth>
+  </div>
 </div>
 <app-footer></app-footer>

@@ -1,24 +1,16 @@
-import {Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {AuthService} from '../../shared/services/auth.service';
 import {FormControl, FormGroup} from '@angular/forms';
 import {Router} from '@angular/router';
 import {fromEvent} from 'rxjs';
-import {filter, map, switchMap} from 'rxjs/operators';
-import {trigger, state, style, animate, transition} from '@angular/animations';
+import {filter, map} from 'rxjs/operators';
+
 
 
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss'],
-  animations: [trigger('startFinish', [
-    state('start', style({})),
-    state('finish', style({direction: '-100%'})),
-    transition('start => finish', [
-      animate('0,8s')
-    ]),
-
-  ])],
 })
 export class AuthComponent implements OnInit, OnDestroy {
   public authForm = true;
@@ -41,46 +33,31 @@ export class AuthComponent implements OnInit, OnDestroy {
   }
 
   initClosedMap() {
-    this.closedTtemMap.set('form_element-input', [
+    this.closedTtemMap.set('pop-up', [
       () => {
-        return true;
-      }
-    ]);
-    this.closedTtemMap.set('form', [
-      () => {
-
-        // this.auth.isRegistratePopupOpened$.next(false);
         this.hideAuthWindow.call(this);
       },
+    ]);
+    this.closedTtemMap.set('btn-close', [
       () => {
-        return true;
-      }
+        this.hideAuthWindow.call(this);
+      },
     ]);
   }
 
   hideAuthWindow() {
-    console.log(this);
     this.auth.isRegistratePopupOpened$.next(false);
   }
 
-  spliceClassName(event: Object) {
-    const fullClassName = event['className'];
-    const arr = fullClassName.split(' ');
-    return arr[0];
-  }
 
   filterForHidingWindow() {
     return filter(data => {
-      if (this.closedTtemMap.get(this.spliceClassName(data))) {
-        this.closedTtemMap.get(this.spliceClassName(data)).forEach(callback => {
+      if (this.closedTtemMap.get(data['className'])) {
+        this.closedTtemMap.get((data['className'])).forEach(callback => {
           callback();
         });
+        return false;
       }
-      if (data['className'] === 'form ng-untouched ng-pristine ng-valid' || data['className'] === 'pop-up') {
-        this.auth.isRegistratePopupOpened$.next(false);
-        return true;
-      }
-
     });
   }
 
@@ -126,7 +103,6 @@ export class AuthComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscriptions.forEach(subscription => {
-      console.log(subscription);
       subscription.unsubscribe();
     });
   }
