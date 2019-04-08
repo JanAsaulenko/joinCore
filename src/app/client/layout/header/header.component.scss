@@ -1,12 +1,53 @@
-.header{
+.header {
   display: flex;
- justify-content: center;
+  justify-content: flex-end;
+  background-color: black;
+  color: white;
+  opacity: 0.9;
 }
 
-.header_nav{
+.logo:hover {
+  box-shadow: 0 0 5px black, 0 0 10px black, 0 0 15px crimson, 0 0 20px crimson, 0 0 35px black, 0 0 40px crimson, 0 0 75px crimson;
+  cursor: pointer;
+  transition: all .9s linear;
+  letter-spacing: 0.009em;;
+}
+
+.logo {
+  position: absolute;
+  justify-content: flex-start;
+   left: 15px;
+
+}
+
+.header_nav {
+  padding-right: 35px;
   display: flex;
+  width: 650px;
   flex-direction: row;
   list-style: none;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+
+  &-item {
+    &:active {
+      border: 0;
+
+    }
+
+    &:hover {
+      opacity: 0.3%;
+      color: crimson;
+      transition: all .3s linear;
+      letter-spacing: 0.001em;
+      text-shadow: 0 0 5px, 0 0 10px, 0 0 15px, 0 0 20px crimson, 0 0 35px crimson, 0 0 40px crimson, 0 0 75px crimson;
+
+    }
+
+  }
+
 }
+
+
+

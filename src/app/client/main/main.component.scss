@@ -1,0 +1,18 @@
+.main{
+   margin: 0;
+  display: block;
+}
+
+.auth_container {
+  display: flex;
+  position: absolute;
+  background: white;
+  left: 34%;
+  top: 16%;
+  min-height: initial;
+  min-width: initial;
+  margin: 0 auto;
+  z-index: 1;
+  transform: translate(-50%);
+}
+

@@ -1,0 +1,105 @@
+.header_block {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vh;
+  flex-direction: row;
+  background: white;
+  margin: 0;
+  background: url("../../../assets/Image/Main3.jpg") no-repeat;
+  background-size: 100%;
+  -o-background-size: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+}
+
+
+.search_block {
+  border-radius: 4px !important;
+  position: absolute;
+  width: 384px;
+  height: 444px;
+  background: white;
+  left: 30%;
+  top: 30%;
+  transform: translate(-30%, -30%);
+  min-height: 300px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.main_block {
+  display: block;
+  min-height: 100vh;
+
+}
+
+.inform_panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vh;
+}
+
+
+.search_button {
+  border-radius: 6px;
+  background: crimson;
+  font-size: 13px;
+  color: white;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid crimson;
+  position: absolute;
+  bottom: 17px;
+  right: 14px;
+
+}
+
+.search_button:hover {
+  box-shadow: 0 0 15px crimson, 0 0 20px crimson, 0 0 35px crimson, 0 0 40px crimson;
+  color: black;
+  transition: all .9s linear;
+  letter-spacing: 0.009em;
+  opacity: 0.3%;
+
+}
+
+.search-input {
+  display: table-cell;
+  vertical-align: middle;
+  width: 300px;
+  height: 32px;
+  border-radius: 3px;
+  background: white;
+  border: 2px solid rgba(242, 241, 239, 1);;
+  font-size: 19px;
+  letter-spacing: 0.009em;
+  transition: all .9s linear;
+  padding: 5px;
+
+}
+
+.search-input:hover {
+  border: 2px solid crimson;
+}
+
+.search_input-checkIn {
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  height: 32px;
+  border-radius: 3px;
+  background: white;
+  border: 2px solid rgba(242, 241, 239, 1);
+  font-size: 19px;
+  letter-spacing: 0.009em;
+  transition: all .9s linear;
+  padding: 5px;
+
+}
+
+.search_input-checkIn:hover {
+  border: 2px solid crimson;
+}

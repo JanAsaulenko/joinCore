@@ -1,0 +1,18 @@
+@import "../../../../styles.scss";
+
+.form_element {
+  width: inherit;
+}
+.form_element{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form_element-input{
+  width: inherit;
+}
+.form-button-block{
+  display: flex;
+  flex-direction: row;
+}
+
+

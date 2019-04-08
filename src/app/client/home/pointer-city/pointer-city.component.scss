@@ -1,0 +1,25 @@
+@import "../../../../styles";
+
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: local("../../../../assets/fonts/NeueHaasGrotesk/NeueHaasDisplay-Bold.ttf") ;
+}
+
+.pointerCity {
+  position: relative;
+  font-family: inherit;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.svg{
+  position: relative;
+  width:20px;
+  height: 18px;
+}
+.svg:hover{
+  text-shadow: crimson;
+}

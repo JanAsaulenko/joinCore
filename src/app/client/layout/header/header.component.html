@@ -1,12 +1,17 @@
 <div class="header">
+  <span class="logo"><img src="../../../../assets/Image/Logos.png" routerLink="" routerLinkActive="active"
+                         [routerLinkActiveOptions]="{exact:true}"></span>
   <ul class="header_nav">
-    <li routerLink="" routerLinkActive="active"
+    <li class="header_nav-item" routerLink="" routerLinkActive="active"
         [routerLinkActiveOptions]="{exact:true}"
     >Домашняя
     </li>
-    <li routerLink="/cabinet" routerLinkActive="active">Личный кабинет</li>
-    <li>Заглушка</li>
-    <li>Поддержка</li>
-    <li>Войти</li>
+    <li class="header_nav-item" routerLink="/cabinet" routerLinkActive="active">Личный кабинет</li>
+    <li class="header_nav-item">Заглушка</li>
+    <li class="header_nav-item">Поддержка</li>
+    <li class="header_nav-item" (click)="openAuthForms()" *ngIf="!auth.isLoggedIn; else output">Войти</li>
+    <ng-template #output>
+      <li class="header_nav-item" (click)="outputAcount()">Выйти</li>
+    </ng-template>
   </ul>
 </div>

@@ -1,0 +1,10 @@
+@import "../../../../../styles";
+.category_item-block{
+  @extend %section;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: inherit;
+  width: 300px;
+  height: 400px ;
+}

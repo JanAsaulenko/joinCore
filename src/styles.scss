@@ -1,1 +1,158 @@
+@import "assets/shared/colors.scss";
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100vh;
+}
+
+%btn {
+  border: $background;
+  height: 40px;
+  background: $btn-scs-color;
+  border-radius: 5px;
+  color: $background;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+%btn:hover {
+  border: $btn-scs-color;
+  color: $btn-close-color;
+  transition: all .3s linear;
+}
+
+.btn-scs {
+  @extend %btn;
+}
+
+.btn-back {
+  @extend %btn;
+  background: $btn-btn-color;
+  border: $btn-btn-color;
+}
+
+.btn-back:hover {
+  border: $btn-btn-color;
+  background-color: $btn-btn-color;
+  transition: all .5s linear;
+  letter-spacing: 0.009em;
+  color: $btn-close-color;
+  box-shadow: 0 0 5px $btn-btn-color, 0 0 10px $btn-btn-color, 0 0 15px $btn-btn-color, 0 0 20px $btn-btn-color, 0 0 35px white, 0 0 40px white, 0 0 75px white;
+}
+
+
+.btn-error {
+  @extend %btn;
+  background: $btn-error-color;
+  border-radius: 5px;
+}
+
+.btn-close {
+  //content: url("../../../../../assets/Image/close.png");
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.form_element-input {
+  border: 2px solid rgba(242, 241, 239, 1);
+  border-radius: 5px;
+  height: 40px;
+  padding-left: 5px;
+  width: 270px;
+  margin: 10px;
+}
+input::-webkit-input-placeholder {
+  padding: 14px;
+  color: darkgrey;
+
+}
+.form_element-input_price{
+  border: 2px solid rgba(242, 241, 239, 1);
+  border-radius: 5px;
+  height: 40px;
+   width:132px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 4px;
+}
+.form_element-input_price:hover{
+  transition: all .9s linear;
+  border: 2px solid $btn-btn-color;
+  letter-spacing: 0.009em;
+}
+
+.form_element-input:hover {
+  transition: all .9s linear;
+  border: 2px solid $btn-btn-color;
+  letter-spacing: 0.009em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+
+
+form.btn-close {
+  display: none;
+}
+
+
+.link {
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 2px;
+  transition: background-size .8s;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: $btn-btn-color;
+  background-size: 100% 2px;
+}
+
+.btn-search {
+  position: relative;
+  top: 6px;
+  left: 19%;
+  border-radius: 6px;
+  background: $btn-btn-color;
+  font-size: 13px;
+  color: $background;
+  width: 135px;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid $btn-btn-color;
+}
+
+.btn-search:hover {
+  box-shadow: 0 0 15px $btn-btn-color, 0 0 20px $btn-btn-color;
+  transition: all .7s linear;
+  letter-spacing: 0.008em;
+  opacity: 0.3%;
+  text-shadow: 0 0 15px $background, 0 0 15px $background;
+}
+%section{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 500px;
+  min-width: 400px;
+  background-color: white;
+  opacity: 0.9;
+  border: 2px solid rgba(218, 223, 225, 1);
+  box-shadow: 0 0 15px rgba(218, 223, 225, 1), 0 0 20px rgba(218, 223, 225, 1), 0 0 35px rgba(218, 223, 225, 1), 0 0 40px rgba(218, 223, 225, 1);
+  border-radius: 3px;
+}
