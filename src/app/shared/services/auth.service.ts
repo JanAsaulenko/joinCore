@@ -11,6 +11,7 @@ export class AuthService {
   public isLoggedIn = false;
   public redirectURL: string;
   public isRegistratePopupOpened$ = new BehaviorSubject(false);
+
   constructor(private auth: AngularFireAuth) {
   }
 

@@ -31,7 +31,6 @@ export class AuthComponent implements OnInit, OnDestroy {
     this.initClosedMap();
     this.closePopup(this.popup.nativeElement);
   }
-
   initClosedMap() {
     this.closedTtemMap.set('pop-up', [
       () => {

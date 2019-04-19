@@ -1,0 +1,9 @@
+<label class="form_element">
+  <mat-form-field>
+    <input matInput [matDatepicker]="myDataPicker1" (dateInput)="takeData($event.value)" placeholder="Choose a date">
+    <mat-datepicker color="accent" #myDataPicker1 ngForm="2" [disabled]="disableCalendar"></mat-datepicker>
+    <!--placeholder-->
+    <mat-datepicker-toggle matSuffix [for]="myDataPicker1"></mat-datepicker-toggle><!--button-->
+    <!--<mat-datepicker  #myDataPicker startView="year" [startAt]="startDate"></mat-datepicker>-->
+  </mat-form-field>
+</label>

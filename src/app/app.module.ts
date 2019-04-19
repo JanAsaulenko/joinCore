@@ -9,7 +9,7 @@ import {config} from './firebase-config';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import {MatDatepickerModule, MatInputModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,9 +22,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(config),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
-  exports: [],
+  exports: [
+    MatDatepickerModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

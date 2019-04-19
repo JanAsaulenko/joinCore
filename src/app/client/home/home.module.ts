@@ -11,6 +11,8 @@ import {CategoryComponent} from './main/category/category.component';
 import {CategoriesListComponent} from './categories-block/categories-list/categories-list.component';
 import {CategoryItemComponent} from './categories-block/category-item/category-item.component';
 import {HomeComponent} from './home.component';
+import {MatDatepickerModule, MatIconModule, MatInputModule, MatNativeDateModule, MatOptionModule, MatSelectModule} from '@angular/material';
+import {DatapickerComponent} from './calendar/datapicker/datapicker.component';
 
 
 @NgModule({
@@ -18,10 +20,16 @@ import {HomeComponent} from './home.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    HomeRoutingModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatInputModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatIconModule,
+    HomeRoutingModule,
   ],
   declarations: [HomeComponent, FeedbacksComponent, AnchorComponent, CategoriesBlockComponent, PointerCityComponent,
-    PointerCityComponent, SearchComponent, CategoryComponent, CategoriesListComponent, CategoryItemComponent]
+    PointerCityComponent, SearchComponent, CategoryComponent, CategoriesListComponent, CategoryItemComponent, DatapickerComponent]
 })
 export class HomeModule {
 }

@@ -5,6 +5,7 @@ import {Component, EventEmitter, Input, OnInit} from '@angular/core';
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss']
 })
+
 export class CategoryComponent implements OnInit {
   @Input() categoryItem = new EventEmitter();
 

@@ -4,12 +4,12 @@ import {Injectable} from '@angular/core';
   providedIn: 'root'
 })
 export class CategoryService {
-  public categories = [{name: 'Rooms'}, {name: 'Amusements'}];
+  public categories = [{name: 'apartment'}, {name: 'houses'}];
 
   constructor() {
   }
 
   getCategories() {
-    return this.categories ;
+    return this.categories;
   }
 }

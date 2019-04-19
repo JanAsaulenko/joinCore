@@ -33,7 +33,6 @@ export class RegistrationComponent implements OnInit {
 
   registrateUser() {
     this.auth.doUserRegister(this.formGroup.value).then((value) => {
-      console.log(value);
       this.successMessage = 'User registrate have been successfull';
       this.redirectToAuth.emit('success'); ///
     }).catch((error) => {

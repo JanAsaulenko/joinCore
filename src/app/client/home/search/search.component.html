@@ -10,8 +10,18 @@
     <input placeholder="Price" type='text' class="form_element-input_price">
     <input placeholder="Price" class="form_element-input_price">
   </label>
-  <label class="form_element">
-  </label>
+  <div class="calendar_container">
+    <app-datapicker (whenClosed)="takeData($event)"></app-datapicker>
+
+
+    <!--<label class="form_element">-->
+    <!--<input [matDatepicker]="myDataPicker2">-->
+    <!--<mat-datepicker #myDataPicker2 (closed)="whenClosed(myDataPicker2)" ></mat-datepicker> &lt;!&ndash;placeholder&ndash;&gt;-->
+    <!--<mat-datepicker-toggle matSuffix [for]="myDataPicker2"></mat-datepicker-toggle>&lt;!&ndash;button&ndash;&gt;-->
+    <!--&lt;!&ndash;<mat-datepicker #myDataPicker startView="year" [startAt]="startDate"></mat-datepicker>&ndash;&gt;-->
+
+    <!--</label>-->
+  </div>
 
   <button class="btn-search">
     Search

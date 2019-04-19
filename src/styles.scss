@@ -1,5 +1,13 @@
 @import "assets/shared/colors.scss";
+@import '~@angular/material/theming';
+
+@include mat-core();
 /* You can add global styles to this file, and also import other style files */
+$my-theme-primary: mat-palette($mat-red, A400);
+$my-theme: mat-light-theme($my-theme-primary);
+@include angular-material-theme($my-theme);
+
+
 body {
   margin: 0;
   padding: 0;
@@ -52,7 +60,7 @@ body {
 }
 
 .btn-close {
-  //content: url("../../../../../assets/Image/close.png");
+  //background-image: url("./assets/Image/close.png");
   position: absolute;
   top: 10px;
   right: 10px;
@@ -67,21 +75,24 @@ body {
   width: 270px;
   margin: 10px;
 }
+
 input::-webkit-input-placeholder {
   padding: 14px;
   color: darkgrey;
 
 }
-.form_element-input_price{
+
+.form_element-input_price {
   border: 2px solid rgba(242, 241, 239, 1);
   border-radius: 5px;
   height: 40px;
-   width:132px;
+  width: 132px;
   flex-direction: row;
   justify-content: space-between;
   margin: 4px;
 }
-.form_element-input_price:hover{
+
+.form_element-input_price:hover {
   transition: all .9s linear;
   border: 2px solid $btn-btn-color;
   letter-spacing: 0.009em;
@@ -99,7 +110,6 @@ input::-webkit-input-placeholder {
   align-items: center;
   width: 100%;
 }
-
 
 
 form.btn-close {
@@ -143,7 +153,8 @@ form.btn-close {
   opacity: 0.3%;
   text-shadow: 0 0 15px $background, 0 0 15px $background;
 }
-%section{
+
+%section {
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -155,4 +166,13 @@ form.btn-close {
   border: 2px solid rgba(218, 223, 225, 1);
   box-shadow: 0 0 15px rgba(218, 223, 225, 1), 0 0 20px rgba(218, 223, 225, 1), 0 0 35px rgba(218, 223, 225, 1), 0 0 40px rgba(218, 223, 225, 1);
   border-radius: 3px;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
