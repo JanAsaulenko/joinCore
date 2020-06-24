@@ -1,0 +1,19 @@
+<div class="player_block">
+  <video controls width="620">
+  </video>
+  <div class="player_list" *ngIf="!videosLoading && videos.length else loading">
+    <div class="list_item" *ngFor="let video of videos" (click)="chooseVideo(video)">
+      <img src="{{video.poster}}" [ngStyle]="{'width':'250px', 'height':'150px'}" />
+    </div>
+  </div>
+  <ng-template #loading>
+    <div class="loading-block">
+      <div class="loading-ring">
+        <div class="loading-inner">
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <div>
+  </div>
+</div>
